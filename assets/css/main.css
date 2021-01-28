@@ -24,7 +24,6 @@ article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;}
 
-
 body {
 	line-height: 1;
 }
@@ -98,6 +97,7 @@ input, select, textarea {
 		}
 
 		100% {
+			color: white;
 			-moz-transform: rotate(360deg);
 			-webkit-transform: rotate(360deg);
 			-ms-transform: rotate(360deg);
@@ -173,7 +173,7 @@ input, select, textarea {
 		justify-content: flex-start;
 		-ms-overflow-style: scrollbar;
 		width: 100%;
-		/*height: 100%;*/
+		height: 100%;
 		min-height: 30rem;
 		overflow: hidden;
 	}
@@ -247,73 +247,27 @@ input, select, textarea {
 			opacity: 0.25;
 		}
 
-
-	@media screen and (max-width: 1500px){
-
-		html, body {
-			/*position: absolute;*/
-           /* width:100%;
-            height: 100%;
-            display:flex;
-            flex-direction: column;
-            scroll-behavior: smooth;*/
-            overflow-x: auto;
- 
-		}
-
-	}
-
-
 	@media screen and (max-width: 736px) {
 
 		html {
 			height: auto;
-			/*position: absolute;*/
 		}
 
 		body {
 			height: auto;
-			/*overflow-x: hidden;
+			overflow-x: hidden;
 			overflow-y: auto;
-			min-height: 100%;*/
-
 		}
 
 	}
 
-	@media screen and (max-width: 480px) and (orientation: portrait){
+	@media screen and (max-width: 480px) {
 
 		html, body {
-			/*position: absolute;*/
-            width:100%;
-            height: 100%;
-            display:flex;
-            flex-direction: column;
-            scroll-behavior: smooth;
-            overflow-x: hidden;
-   		}
-
-	}
-
-	@media screen and (max-width: 355px) {
-
-		html, body {
-			/*position: absolute;*/
-           /* width:100%;
-            height: 100%;
-            display:flex;
-            flex-direction: column;
-            scroll-behavior: smooth;*/
-            overflow-x: auto;
-            display: inline;
-   
-
+			min-width: 320px;
 		}
 
 	}
-
-
-
 
 /* Typography */
 
@@ -400,8 +354,7 @@ input, select, textarea {
 
 		h1.major:after, h2.major:after, h3.major:after {
 			content: '';
-			position: relative;
-			align-content: center;
+			position: absolute;
 			left: 0;
 			width: 3.5rem;
 			height: 0.1rem;
@@ -928,43 +881,23 @@ input, select, textarea {
 	}
 
 		.image.filtered:after {
-			/*min-width: 550px;*/
-			/*display: inline-block;*/
-			background-image: url("../../images/overlay.png"), linear-gradient(45deg, rgba(114, 97, 147, 0.25) 25%, rgba(227, 123, 124, 0.25) 50%, rgba(255, 228, 180, 0.25));
-/*			background-size: 240px 248px, auto;
-*/			pointer-events: none;
+/*			background-image: url("../../images/overlay.png"), linear-gradient(45deg, rgba(114, 97, 147, 0.25) 25%, rgba(227, 123, 124, 0.25) 50%, rgba(255, 228, 180, 0.25));
+*/			background-size: 128px 128px, auto;
+			pointer-events: none;
 			content: '';
 			position: absolute;
 			top: 0;
 			left: 0;
-			/*width: 100%;*/
-/*			height: 100%;
-*/			opacity: 1;
-			z-index: 1;
-		}
-
-		.image.filtered.mob:after {
-			/*min-width: 550px;*/
-			/*display: inline-block;*/
-			background-image: url("../../images/overlay.png"), linear-gradient(45deg, rgba(114, 97, 147, 0.25) 25%, rgba(227, 123, 124, 0.25) 50%, rgba(255, 228, 180, 0.25));
-/*			background-size: 240px 248px, auto;
-*/			pointer-events: none;
-			content: '';
-			position: absolute;
-			top: 0;
-			left: 0;
-			/*width: 100%;*/
-/*			height: 100%;
-*/			opacity: 1;
+			width: 100%;
+			height: 100%;
+			opacity: 1;
 			z-index: 1;
 		}
 
 		.image.filtered.tinted:after {
-			/*min-width: 550px;*/
-			/*display: inline-block;*/
-			background-image: url("../../images/overlay.png"), linear-gradient(45deg, rgba(114, 97, 147, 0.25) 25%, rgba(227, 123, 124, 0.25) 50%, rgba(255, 228, 180, 0.25)), linear-gradient(0deg, rgba(0, 0, 0, 0.125), rgba(0, 0, 0, 0.125));
-/*			background-size: 240px 248px, auto, auto;
-*/		}
+/*			background-image: url("../../images/overlay.png"), linear-gradient(45deg, rgba(114, 97, 147, 0.25) 25%, rgba(227, 123, 124, 0.25) 50%, rgba(255, 228, 180, 0.25)), linear-gradient(0deg, rgba(0, 0, 0, 0.125), rgba(0, 0, 0, 0.125));
+*/			background-size: 128px 128px, auto, auto;
+		}
 
 		.image[data-position] img {
 			-moz-object-fit: cover;
@@ -1113,8 +1046,7 @@ input, select, textarea {
 			.image.main img {
 				width: 100%;
 			}
-
-		@media only screen and (max-width : 550px) {
+	@media only screen and (max-width : 550px) {
 		    /*.image.filtered:nth-child(1),*/
 		    .image.filtered.mob:nth-child(2) 
 		    {
@@ -1126,13 +1058,6 @@ input, select, textarea {
 		    	align-content: center;
 		    }*/
 		}
-
-		/* Tab ----------- 
-		/*@media only screen and (max-width : 991px) and (min-width : 768px) {
-		    .ur_class:nth-child(4) {
-		        display: none;
-		    }
-		}*/
 
 /* List */
 
@@ -1731,7 +1656,6 @@ input, select, textarea {
 			button.primary.color1,
 			.button.primary.color1 {
 				color: #FFFFFF !important;
-
 			}
 
 			input[type="submit"].primary.color2,
@@ -1812,6 +1736,7 @@ input, select, textarea {
 
 	@-webkit-keyframes gallery-modal-spinner {
 		0% {
+			color: white;
 			-moz-transform: rotate(0deg);
 			-webkit-transform: rotate(0deg);
 			-ms-transform: rotate(0deg);
@@ -1819,6 +1744,7 @@ input, select, textarea {
 		}
 
 		100% {
+			color: white;
 			-moz-transform: rotate(360deg);
 			-webkit-transform: rotate(360deg);
 			-ms-transform: rotate(360deg);
@@ -2305,8 +2231,7 @@ input, select, textarea {
 			}
 
 			.panel > *.color2 {
-				/*background-image: url("../../images/overlay.png"), linear-gradient(45deg, rgba(114, 97, 147, 0.25) 25%, rgba(227, 123, 124, 0.25) 50%, rgba(255, 228, 180, 0.25));*/
-				background-size: 128px 128px, auto;
+/*				background-image: url("../../images/overlay.png"), linear-gradient(45deg, rgba(114, 97, 147, 0.25) 25%, rgba(227, 123, 124, 0.25) 50%, rgba(255, 228, 180, 0.25));*/				background-size: 128px 128px, auto;
 				background-color: #0859C6;
 			}
 
@@ -2811,56 +2736,56 @@ input, select, textarea {
 		}
 
 		.panel.color0 {
-			/*background-image: url("../../images/overlay.png"), linear-gradient(45deg, #726193 20%, #e37b7c 60%, #ffe4b4);*/
-			background-size: 128px 128px, auto;
-			background-color: #292929 
+/*			background-image: url("../../images/overlay.png"), linear-gradient(45deg, #726193 20%, #e37b7c 60%, #ffe4b4);
+*/			background-size: 128px 128px, auto;
+			background-color: #292929;
 		}
 
 		.panel.color1 {
-			/*background-image: url("../../images/overlay.png"), linear-gradient(45deg, rgba(114, 97, 147, 0.25) 25%, rgba(227, 123, 124, 0.25) 50%, rgba(255, 228, 180, 0.25));*/
-			background-size: 128px 128px, auto;
+/*			background-image: url("../../images/overlay.png"), linear-gradient(45deg, rgba(114, 97, 147, 0.25) 25%, rgba(227, 123, 124, 0.25) 50%, rgba(255, 228, 180, 0.25));
+*/			background-size: 128px 128px, auto;
 			background-color: #FFFFFF;
 		}
 
 		.panel.color2 {
-			/*background-image: url("../../images/overlay.png"), linear-gradient(45deg, rgba(114, 97, 147, 0.25) 25%, rgba(227, 123, 124, 0.25) 50%, rgba(255, 228, 180, 0.25));*/
-			background-size: 128px 128px, auto;
+/*			background-image: url("../../images/overlay.png"), linear-gradient(45deg, rgba(114, 97, 147, 0.25) 25%, rgba(227, 123, 124, 0.25) 50%, rgba(255, 228, 180, 0.25));
+*/			background-size: 128px 128px, auto;
 			background-color: #0859C6;
 		}
 
 		.panel.color3 {
-			/*background-image: url("../../images/overlay.png"), linear-gradient(45deg, rgba(114, 97, 147, 0.25) 25%, rgba(227, 123, 124, 0.25) 50%, rgba(255, 228, 180, 0.25));*/
-			background-size: 128px 128px, auto;
+/*			background-image: url("../../images/overlay.png"), linear-gradient(45deg, rgba(114, 97, 147, 0.25) 25%, rgba(227, 123, 124, 0.25) 50%, rgba(255, 228, 180, 0.25));
+*/			background-size: 128px 128px, auto;
 			background-color: #0859C6;
 		}
 
 		.panel.color4 {
-			/*background-image: url("../../images/overlay.png"), linear-gradient(45deg, rgba(114, 97, 147, 0.25) 25%, rgba(227, 123, 124, 0.25) 50%, rgba(255, 228, 180, 0.25));*/
-			background-size: 128px 128px, auto;
+/*			background-image: url("../../images/overlay.png"), linear-gradient(45deg, rgba(114, 97, 147, 0.25) 25%, rgba(227, 123, 124, 0.25) 50%, rgba(255, 228, 180, 0.25));
+*/			background-size: 128px 128px, auto;
 			background-color: #1E41E2;
 		}
 
 		.panel.color1-alt {
-			/*background-image: url("../../images/overlay.png"), linear-gradient(45deg, rgba(114, 97, 147, 0.175) 25%, rgba(227, 123, 124, 0.175) 50%, rgba(255, 228, 180, 0.175));*/
-			background-size: 128px 128px, auto;
+/*			background-image: url("../../images/overlay.png"), linear-gradient(45deg, rgba(114, 97, 147, 0.175) 25%, rgba(227, 123, 124, 0.175) 50%, rgba(255, 228, 180, 0.175));
+*/			background-size: 128px 128px, auto;
 			background-color: #0859C6;
 		}
 
 		.panel.color2-alt {
-			/*background-image: url("../../images/overlay.png"), linear-gradient(45deg, rgba(114, 97, 147, 0.175) 25%, rgba(227, 123, 124, 0.175) 50%, rgba(255, 228, 180, 0.175));*/
-			background-size: 128px 128px, auto;
+/*			background-image: url("../../images/overlay.png"), linear-gradient(45deg, rgba(114, 97, 147, 0.175) 25%, rgba(227, 123, 124, 0.175) 50%, rgba(255, 228, 180, 0.175));
+*/			background-size: 128px 128px, auto;
 			background-color: #de7172;
 		}
 
 		.panel.color3-alt {
-			/*background-image: url("../../images/overlay.png"), linear-gradient(45deg, rgba(114, 97, 147, 0.175) 25%, rgba(227, 123, 124, 0.175) 50%, rgba(255, 228, 180, 0.175));*/
-			background-size: 128px 128px, auto;
+/*			background-image: url("../../images/overlay.png"), linear-gradient(45deg, rgba(114, 97, 147, 0.175) 25%, rgba(227, 123, 124, 0.175) 50%, rgba(255, 228, 180, 0.175));
+*/			background-size: 128px 128px, auto;
 			background-color: #fedea6;
 		}
 
 		.panel.color4-alt {
-			/*background-image: url("../../images/overlay.png"), linear-gradient(45deg, rgba(114, 97, 147, 0.175) 25%, rgba(227, 123, 124, 0.175) 50%, rgba(255, 228, 180, 0.175));*/
-			background-size: 128px 128px, auto;
+/*			background-image: url("../../images/overlay.png"), linear-gradient(45deg, rgba(114, 97, 147, 0.175) 25%, rgba(227, 123, 124, 0.175) 50%, rgba(255, 228, 180, 0.175));
+*/			background-size: 128px 128px, auto;
 			background-color: #323459;
 		}
 
@@ -2875,50 +2800,50 @@ input, select, textarea {
 		}
 
 			.panel > *.color1 {
-				/*background-image: url("../../images/overlay.png"), linear-gradient(135deg, rgba(114, 97, 147, 0.25) 25%, rgba(227, 123, 124, 0.25) 50%, rgba(255, 228, 180, 0.25));*/
-				background-size: 128px 128px, auto;
+/*				background-image: url("../../images/overlay.png"), linear-gradient(135deg, rgba(114, 97, 147, 0.25) 25%, rgba(227, 123, 124, 0.25) 50%, rgba(255, 228, 180, 0.25));
+*/				background-size: 128px 128px, auto;
 				background-color: #FFFFFF;
 			}
 
 			.panel > *.color2 {
-				/*background-image: url("../../images/overlay.png"), linear-gradient(135deg, rgba(114, 97, 147, 0.25) 25%, rgba(227, 123, 124, 0.25) 50%, rgba(255, 228, 180, 0.25));*/
-				background-size: 128px 128px, auto;
+/*				background-image: url("../../images/overlay.png"), linear-gradient(135deg, rgba(114, 97, 147, 0.25) 25%, rgba(227, 123, 124, 0.25) 50%, rgba(255, 228, 180, 0.25));
+*/				background-size: 128px 128px, auto;
 				background-color: #0859C6;
 			}
 
 			.panel > *.color3 {
-				/*background-image: url("../../images/overlay.png"), linear-gradient(135deg, rgba(114, 97, 147, 0.25) 25%, rgba(227, 123, 124, 0.25) 50%, rgba(255, 228, 180, 0.25));*/
-				background-size: 128px 128px, auto;
+/*				background-image: url("../../images/overlay.png"), linear-gradient(135deg, rgba(114, 97, 147, 0.25) 25%, rgba(227, 123, 124, 0.25) 50%, rgba(255, 228, 180, 0.25));
+*/				background-size: 128px 128px, auto;
 				background-color: #0859C6;
 			}
 
 			.panel > *.color4 {
-				/*background-image: url("../../images/overlay.png"), linear-gradient(135deg, rgba(114, 97, 147, 0.25) 25%, rgba(227, 123, 124, 0.25) 50%, rgba(255, 228, 180, 0.25));*/*/
+				background-image: url("../../images/overlay.png"), linear-gradient(135deg, rgba(114, 97, 147, 0.25) 25%, rgba(227, 123, 124, 0.25) 50%, rgba(255, 228, 180, 0.25));
 				background-size: 128px 128px, auto;
 				background-color: #353865;
 			}
 
 			.panel > *.color1-alt {
-				/*background-image: url("../../images/overlay.png"), linear-gradient(135deg, rgba(114, 97, 147, 0.175) 25%, rgba(227, 123, 124, 0.175) 50%, rgba(255, 228, 180, 0.175));*/
-				background-size: 128px 128px, auto;
+/*				background-image: url("../../images/overlay.png"), linear-gradient(135deg, rgba(114, 97, 147, 0.175) 25%, rgba(227, 123, 124, 0.175) 50%, rgba(255, 228, 180, 0.175));
+*/				background-size: 128px 128px, auto;
 				background-color: #6c5e86;
 			}
 
 			.panel > *.color2-alt {
-				/*background-image: url("../../images/overlay.png"), linear-gradient(135deg, rgba(114, 97, 147, 0.175) 25%, rgba(227, 123, 124, 0.175) 50%, rgba(255, 228, 180, 0.175));*/
-				background-size: 128px 128px, auto;
+/*				background-image: url("../../images/overlay.png"), linear-gradient(135deg, rgba(114, 97, 147, 0.175) 25%, rgba(227, 123, 124, 0.175) 50%, rgba(255, 228, 180, 0.175));
+*/				background-size: 128px 128px, auto;
 				background-color: #de7172;
 			}
 
 			.panel > *.color3-alt {
-				/*background-image: url("../../images/overlay.png"), linear-gradient(135deg, rgba(114, 97, 147, 0.175) 25%, rgba(227, 123, 124, 0.175) 50%, rgba(255, 228, 180, 0.175));*/
-				background-size: 128px 128px, auto;
+/*				background-image: url("../../images/overlay.png"), linear-gradient(135deg, rgba(114, 97, 147, 0.175) 25%, rgba(227, 123, 124, 0.175) 50%, rgba(255, 228, 180, 0.175));
+*/				background-size: 128px 128px, auto;
 				background-color: #fedea6;
 			}
 
 			.panel > *.color4-alt {
-				/*background-image: url("../../images/overlay.png"), linear-gradient(135deg, rgba(114, 97, 147, 0.175) 25%, rgba(227, 123, 124, 0.175) 50%, rgba(255, 228, 180, 0.175));*/
-				background-size: 128px 128px, auto;
+/*				background-image: url("../../images/overlay.png"), linear-gradient(135deg, rgba(114, 97, 147, 0.175) 25%, rgba(227, 123, 124, 0.175) 50%, rgba(255, 228, 180, 0.175));
+*/				background-size: 128px 128px, auto;
 				background-color: #323459;
 			}
 
@@ -3302,14 +3227,14 @@ input, select, textarea {
 				}
 
 			.panel.color1 {
-				/*background-image: url("../../images/overlay.png"), linear-gradient(135deg, rgba(114, 97, 147, 0.25) 25%, rgba(227, 123, 124, 0.25) 50%, rgba(255, 228, 180, 0.25));*/
-				/*background-size: 128px 128px, auto;
+				/*background-image: url("../../images/overlay.png"), linear-gradient(135deg, rgba(114, 97, 147, 0.25) 25%, rgba(227, 123, 124, 0.25) 50%, rgba(255, 228, 180, 0.25));
+				background-size: 128px 128px, auto;
 				background-color: #726193;*/
 			}
 
 			.panel.color2 {
-				/*background-image: url("../../images/overlay.png"), linear-gradient(135deg, rgba(114, 97, 147, 0.25) 25%, rgba(227, 123, 124, 0.25) 50%, rgba(255, 228, 180, 0.25));*/
-				background-size: 128px 128px, auto;
+/*				background-image: url("../../images/overlay.png"), linear-gradient(135deg, rgba(114, 97, 147, 0.25) 25%, rgba(227, 123, 124, 0.25) 50%, rgba(255, 228, 180, 0.25));
+*/				background-size: 128px 128px, auto;
 				background-color: #000000;
 			}
 
@@ -3320,32 +3245,32 @@ input, select, textarea {
 			}
 
 			.panel.color4 {
-				background-image: url("../../images/overlay.png"), linear-gradient(135deg, rgba(114, 97, 147, 0.25) 25%, rgba(227, 123, 124, 0.25) 50%, rgba(255, 228, 180, 0.25));
-				background-size: 128px 128px, auto;
+/*				background-image: url("../../images/overlay.png"), linear-gradient(135deg, rgba(114, 97, 147, 0.25) 25%, rgba(227, 123, 124, 0.25) 50%, rgba(255, 228, 180, 0.25));
+*/				background-size: 128px 128px, auto;
 				background-color: #0859C6;
 			}
 
 			.panel.color1-alt {
-				/*background-image: url("../../images/overlay.png"), linear-gradient(135deg, rgba(114, 97, 147, 0.175) 25%, rgba(227, 123, 124, 0.175) 50%, rgba(255, 228, 180, 0.175));*/
-				/*background-size: 128px 128px, auto;
+				/*background-image: url("../../images/overlay.png"), linear-gradient(135deg, rgba(114, 97, 147, 0.175) 25%, rgba(227, 123, 124, 0.175) 50%, rgba(255, 228, 180, 0.175));
+				background-size: 128px 128px, auto;
 				background-color: #6c5e86;*/
 			}
 
 			.panel.color2-alt {
-				/*background-image: url("../../images/overlay.png"), linear-gradient(135deg, rgba(114, 97, 147, 0.175) 25%, rgba(227, 123, 124, 0.175) 50%, rgba(255, 228, 180, 0.175));*/
-				/*background-size: 128px 128px, auto;
+				/*background-image: url("../../images/overlay.png"), linear-gradient(135deg, rgba(114, 97, 147, 0.175) 25%, rgba(227, 123, 124, 0.175) 50%, rgba(255, 228, 180, 0.175));
+				background-size: 128px 128px, auto;
 				background-color: #de7172;*/
 			}
 
 			.panel.color3-alt {
-				/*background-image: url("../../images/overlay.png"), linear-gradient(135deg, rgba(114, 97, 147, 0.175) 25%, rgba(227, 123, 124, 0.175) 50%, rgba(255, 228, 180, 0.175));*/
-				/*background-size: 128px 128px, auto;
+				/*background-image: url("../../images/overlay.png"), linear-gradient(135deg, rgba(114, 97, 147, 0.175) 25%, rgba(227, 123, 124, 0.175) 50%, rgba(255, 228, 180, 0.175));
+				background-size: 128px 128px, auto;
 				background-color: #fedea6;*/
 			}
 
 			.panel.color4-alt {
-				/*background-image: url("../../images/overlay.png"), linear-gradient(135deg, rgba(114, 97, 147, 0.175) 25%, rgba(227, 123, 124, 0.175) 50%, rgba(255, 228, 180, 0.175));*/
-				/*background-size: 128px 128px, auto;
+				/*background-image: url("../../images/overlay.png"), linear-gradient(135deg, rgba(114, 97, 147, 0.175) 25%, rgba(227, 123, 124, 0.175) 50%, rgba(255, 228, 180, 0.175));
+				background-size: 128px 128px, auto;
 				background-color: #323459;*/
 			}
 
@@ -3531,7 +3456,7 @@ input, select, textarea {
 				position: absolute;
 				top: 0;
 				left: 0;
-				/*width: 100%;*/
+				width: 100%;
 				height: 100%;
 			}
 
@@ -3543,9 +3468,7 @@ input, select, textarea {
 		}
 
 			.panel.spotlight.left .content {
-				/*background-image: url(../../images/box2.png);*/
 				background-color: #0859C6 ;
-				/*background-color: #142263 linear-gradient(-90deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.125) 30%, rgba(0, 0, 0, 0.175) 50%);*/
 			}
 
 		.panel.spotlight.right {
@@ -3556,7 +3479,6 @@ input, select, textarea {
 		}
 
 			.panel.spotlight.right .content {
-				/*background-image: url(../../images/overlay.png);*/
 				background-image: #0859C6;/*linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.125) 30%, rgba(0, 0, 0, 0.175) 50%);*/
 			}
 
@@ -3606,16 +3528,14 @@ input, select, textarea {
 		-ms-flex-shrink: 1;
 		flex-shrink: 1;
 		height: 100%;
-		padding: 5.5rem;
+		padding: 6rem;
 	}
 
 		@media screen and (orientation: portrait) {
 
 			#page-wrapper {
-				padding-top: 0rem;
 				padding-left: 2rem;
 				padding-right: 2rem;
-				padding-bottom: 0rem;
 			}
 
 		}
@@ -3790,9 +3710,5 @@ input, select, textarea {
 				-ms-transform: none;
 				transform: none;
 			}
-
-	}
-
-	.medium-widget-article__title{
 
 	}

@@ -103,11 +103,7 @@
 					settings.dragging.enabled = false;
 
 				// Re-enable overflow on body.
-					$body.css('overflow-x', 'hidden');
-					$body.css('overflowY', 'auto'); 
-					$('html, body').css('overflowY', 'auto'); 
-
-
+					$body.css('overflow-x', 'auto');
 
 			}
 
