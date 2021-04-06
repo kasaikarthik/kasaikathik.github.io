@@ -19,7 +19,7 @@ body {
 body::before {
   content: "";
   position: fixed;
-  /* background: #040404 url("../img/bg.jpg") top right no-repeat; */
+  background-color: #020b14;
   background-size: cover;
   left: 0;
   right: 0;
@@ -1204,7 +1204,7 @@ html {
     transform: translateY(0px);
   }
   to {
-    transform: translateY(-2500px);
+    transform: translateY(-2200px);
   }
 }
 
