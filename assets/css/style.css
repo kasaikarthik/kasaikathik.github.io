@@ -1204,6 +1204,10 @@ html {
     transform: translateY(0px);
   }
   to {
-    transform: translateY(-2000px);
+    transform: translateY(-2500px);
   }
+}
+
+.intro-card{
+  border: 2.5px solid;
 }
