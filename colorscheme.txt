@@ -1,8 +1,0 @@
-Grey - Background - #292929
-Box colors -
-- Black - #FFFFFF
-- Royal Blue - #142263
-- Copper - #7E3F04
-
-Highlighting text - #1E41E2
-You can find my achievements and experiences on the next screen. Tap on each of the banners to view them in detail.
